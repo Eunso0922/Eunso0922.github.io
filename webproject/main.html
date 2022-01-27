@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>보안 로드맵</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+
+    <style>
+      /*로고*/
+      h3{
+        display: inline;
+        margin: 0;
+      }
+
+      .logo{
+        display: inline;
+      }
+
+
+
+      /*이벤트 배너*/
+      .slider{
+          width: 640px;
+          height: 480px;
+          position: relative;
+          margin: 0 auto;
+      }
+      .slider input[type=radio]{
+          display: none;
+      }
+
+      ul.imgs{
+          padding: 0;
+          margin: 0;
+      }
+      ul.imgs li{
+          position: absolute; /* 슬라이드가 겹쳐서 모여야 하므로 absolute 속성으로 배치 */
+          opacity: 0; /* 체크한 라디오박스 순서의 슬라이드만 표시되도록 기본 투명도 설정 */
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .bullets{
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 20px;
+          z-index: 2;
+      }
+      .bullets label{
+          display: inline-block;
+          border-radius: 50%;
+          background-color: rgba(0,0,0,0.55);
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+      }
+
+      /* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+      .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+          background-color: #fff;
+      }
+      .slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+          background-color: #fff;
+      }
+      .slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+          background-color: #fff;
+      }
+
+      .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+          opacity: 1;
+          transition: 1s;
+          z-index: 1;
+      }
+      .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+          opacity: 1;
+          transition: 1s;
+          z-index: 1;
+      }
+      .slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+          opacity: 1;
+          transition: 1s;
+          z-index: 1;
+      }
+
+      ul.imgs li{
+      position: absolute;
+      opacity: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      transition-delay: 0.9s; /* 트랜지션 지연 시간 지정 */
+  }
+
+
+
+/*Swiper - 직군 대외활동 카드뉴스*/
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+    </style>
+  </head>
+
+
+
+  <body>
+    <div class="logo">
+    <img width=43.2px height=43.2px src="logolock.png">
+    </div>
+
+    <h3><a href="">직군</a></h3>
+    <h3><a href="">로드맵</a></h3>
+    <h3><a href="">대외활동</a></h3>
+    <h3><a href="">News</a></h3>
+    <h3><a href="">커뮤니티</a></h3>
+    <h3><a href="">로그인</a></h3>
+    <h3><a href="">회원가입</a></h3>
+
+
+
+    <h2>이벤트</h2>
+
+    <div class="slider">
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+
+    <ul id="imgholder" class="imgs">
+        <li><img width="100%" height="20%" src="gift.jpg"></li>
+        <li><img width="100%" height="20%" src="light.jpg"></li>
+        <li><img width="100%" height="20%" src="twogift.jpg"></li>
+    </ul>
+
+    <div class="bullets">
+        <label for="slide1">&nbsp;</label>
+        <label for="slide2">&nbsp;</label>
+        <label for="slide3">&nbsp;</label>
+    </div>
+    </div>
+
+
+
+    <h2>보안 직군</h2>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img width="100%" height="20%" src="1모의해킹전문가.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="2보안기술영업.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="3보안컨설턴트.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="4보안관제사.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="5사이버수사관.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="6악성코드분석가.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="7인증심사원.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="8정보보호최고책임자.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="9DB보안전문가.jpg"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+
+
+    <h2>대외 활동</h2>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img width="100%" height="20%" src="동아리1.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="동아리2.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="대회1.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="동아리3.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="동아리4.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="대회2.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="동아리5.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="동아리6.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="대회3.jpg"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+
+
+    <h2>카드 뉴스</h2>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스1.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스2.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스3.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스4.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스5.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스6.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스7.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스8.jpg"></div>
+        <div class="swiper-slide"><img width="100%" height="20%" src="뉴스9.jpg"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+
+  </body>
+</html>
