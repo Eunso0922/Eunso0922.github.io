@@ -1,126 +1,241 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>보안 로드맵</title>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
-        <style>
-            h3{
-                display: inline;
-                margin: 0;
+<html lang="en">
+<head>
+    <title>보안 로드맵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header { /*상단 메뉴*/
+            background-color: #f1f1f1;
+            padding: 3px;
+            padding-left: 70px;
+        }
+        .header  ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header  ul:after {
+            content:'';
+            display: block;
+            clear:both;
+        }
+        .header  li {
+            float: left;
+        }
+        .header  li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: yellowgreen;
+            color:white;
+        }
+        .column { /* 사이드 메뉴 + 본문*/
+            float: left;
+            padding: 10px;
+        }
+        .column.side { /*사이드 메뉴*/
+            width: 25%;
+        }
+        #sideMenu {
+            text-align: center;
+        }
+        .column.side ul {
+            list-style-type: none;
+        }
+        .column.side li a{ /*사이드 메뉴 목록*/
+            text-align: center;
+            text-decoration: none;
+            height: 30px;
+            line-height:30px;
+            display:block;
+            padding:0 20px;
+            font-size: 12px;
+            color: #555;
+        }
+        .column.side a:hover { /*사이드 메뉴 active*/
+            background-color : yellowgreen;
+            color:white;
+        }
+        .column.middle { /*본문*/
+            width: 70%;
+        }
+        #title {
+            text-align: center;
+        }
+        img { /*사진 가운데 정렬*/
+            display: block; margin: 0px auto; 
+        }
+        .row:after { /* Clear floats after the columns */
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) { /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+            .column.side, .column.middle {
+                width: 100%;
             }
-            .logo{
-                display: inline;
-            }
-        </style>
-    </head>
+        }
+        .footer { /* Style the footer */
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
 
-    <body>
-        <a href="main.html">
-            <div class="logo">
-            <img width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
-            </div>
-        </a>
-
-        <h3><a href="">직군</a></h3>
-        <h3><a href="">로드맵</a></h3>
-        <h3><a href="">대외활동</a></h3>
-        <h3><a href="">News</a></h3>
-        <h3><a href="">커뮤니티</a></h3>
-        <h3><a href="">로그인</a></h3>
-        <h3><a href="">회원가입</a></h3>
-
-        <nav>
-            <h4>카테고리</h4>
-            <ul id="sideMenu">
-                <li><a class="menuLink" href="/webproject/joblist/job1.html">보안 컨설턴트</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job2.html">악성코드 분석가</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job3.html">모의해킹 전문가</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job4.html">보안 기술영업</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job5.html">보안관제사</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job6.html">사이버 수사관</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job7.html">인증심사원</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job8.html">정보 보호 최고책임자</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job9.html">DB보안 전문가</a></li>
+<body>
+    <div class="header">
+        <ul>
+            <li>
+                <a href="main.html">
+                    <img id="logo" width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
+                </a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">직군</button>
+                    <div class="dropdown-content">
+                        <a href="/webproject/joblist/job1.html">모의 해킹 전문가</a>
+                        <a href="/webproject/joblist/job2.html">보안 기술 영업</a>
+                        <a href="/webproject/joblist/job3.html">보안 컨설턴트</a>
+                        <a href="/webproject/joblist/job4.html">보안 관제사</a>
+                        <a href="/webproject/joblist/job5.html">사이버 수사관</a>
+                        <a href="/webproject/joblist/job6.html">악성 코드 분석가</a>
+                        <a href="/webproject/joblist/job7.html">인증 심사원</a>
+                        <a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a>
+                        <a href="/webproject/joblist/job9.html">DB 보안 전문가</a>
+                    </div>
+                </div>
+            </li>
+                <li><a href="">로드맵</a></li>
+                <li><a href="">대외활동</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">커뮤니티</a></li>
             </ul>
-        </nav>
-
-        <section>
-            <article>
-                <h1>보안 컨설턴트<br></h1>
-                <img img width="50%" height="10%" src="/webproject/images/jobs/1모의해킹전문가.jpg" />
-                <h3><br>직업 설명<br></h3>
-                <p>회사 내부의 취약점을 발견해 그에 맞는 보안대책을 설계하고, 각종 보안위협으로부터 기업을 보호합니다.</p>
-                <h3><br>요구 능력<br></h3>
-                <p>
-                    1. 경영진의 마인드를 가지고, 경영의 흐름을 읽을 수 있는 능력<br>
-                    2. 관리체계 기반, 정보시스템 기반, 공격에 대한 대응방어 기술 등의 보안기술<br>
-                    3. 융합보안 트렌드를 읽어낼 수 있는 안목<br>
-                    4. 관찰력, 분석력, 문서작성 능력, PT(Presentation) 능력<br>
-                </p>
-                <h3><br>취업 준비<br></h3>
-                <p> 시스템 OS, 데이터베이스, 정보 시스템 동작 운영원리 등 정보시스템에 대한 이해가 중요합니다.<br> 
-                    학교에서 배우는 이론적인 운영체제도 필요하지만 실제 상용화된 운영체제나 정보 시스템에 대한 이해가 요구됩니다.<br> 
-                    이러한 능력이 취업과 연계되기 위해서는 국내 기업, 공공기관 등에서 사용하는 실제 운영체제나 솔루션이 어떤 아키텍처로 구성되어 있는지 습득하는 것도 큰 도움이 됩니다.<br>
-                    <br>
-                    또한, 결과 보고 시 필요한 문서작성 능력과 PT(Presentation) 능력도 중요합니다.<br>
-                    자격증이 있으면 도움이 될 수 있겠지만 자격증이 맹목적인 평가요소가 될 수는 없습니다.<br>
-                    자격증 취득으로 인해 기본적 지식은 쌓이겠지만 업무상에서 그것이 만능은 아니기 때문입니다.<br>
-                    하지만, 만약 자격증을 고려한다면 CISSP 등을 추천합니다.<br>
-                </p>
-                <h3><br>인재상<br></h3>
-                <p>
-                    문제 해결을 위한 ‘끈기’, 자신의 감정을 제어할 수 있는 ‘침착성’, 상황을 객관적으로 읽을 수 있는 ‘냉철함’, 그리고 기밀 유지를 위한 ‘윤리의식‘ 등이 필요합니다.<br>
-                    네 가지를 종합적으로 묶으면 가장 중요한 것은 자기 컨트롤입니다.<br>
-                    보안 컨설턴트는 고객을 상대하는 일인 만큼 자기 컨트롤이 되지 않으면 고객으로부터 불만이 생기게 되고, 스스로 컨트롤이 되지 않는다면 회사에서도 더 이상 역할을 맡길 수 없는 상황이 발생합니다.<br>
-                    감정을 다스리지 못하게 되면 객관적인 분석 내용이 아닌 자기 주관과 감정에 의한 결과가 도출될 수 있기 때문에 경계해야 합니다.<br>
-                </p>
-                <h3><br>장단점<br></h3>
-                <p>
-                    정보보호관련 사고 및 신규 이슈에 따른 패러다임 등을 실제 업무상에 빨리 적용할 수 있고, 그만큼 빨리 터득할 수 있습니다.<br>
-                    하지만 문제 해결과 결과 도출에 대한 중압감, 그리고 매번 바뀌는 팀과의 협업 문제는 직업상의 단점이 될 수 있습니다.<br>
-                    또한, 이 분야는 평생 자기개발을 위해 힘써야 하는 분야입니다.<br>
-                </p>
-                <h3><br>전망<br></h3>
-                <p>
-                    유비쿼터스나 융합보안에 홈 시큐리티가 결합된 방향이 이슈가 될 것으로 예상됩니다.<br>
-                    홈 네트워크 활성화로 인해 기업내 해킹 사고가 가정으로까지 확대될 것이라고 예상되기 때문입니다.<br>
-                    이와 함께 개인정보보호 분야는 계속 이슈가 될 것입니다.<br>
-                </p>
-
-            </article>
-        </section>
-
-        <style>
-            h1 { /*제목*/
-                text-align: center; 
-                margin-left: 60px;
-                margin-bottom: 20px;
-            }
-            h4 { /*카테고리 제목*/
-                text-align: left; 
-                margin-left: 60px;
-                margin-bottom: 20px;
-            }
-            nav { /*카테고리 내용*/
-                width: 200px;
-                background-color:#eee;
-                border-right: 1px solid #ddd;
-            }
-            .sideMenu li a{
-                height: 30px;
-                line-height:30px;
-                display:block;
-                padding:0 20px;
-                font-size: 12px;
-                color: #555;
-            }
-            .sideMenu li a:hover {
-                background-color : yellowgreen;
-                color:white;
-            }
-        </style>
-    </body>
+        </h3>
+    </div>
+ 
+    <div class="row">
+        <div class="column side">
+            <nav>
+                <h4 id="sideMenu">카테고리</h4>
+                <ul>
+                    <li><a href="/webproject/joblist/job1.html">모의 해킹 전문가</a></li>
+                    <li><a href="/webproject/joblist/job2.html">보안 기술 영업</a></li>
+                    <li><a href="/webproject/joblist/job3.html">보안 컨설턴트</a></li>
+                    <li><a href="/webproject/joblist/job4.html">보안 관제사</a></li>
+                    <li><a href="/webproject/joblist/job5.html">사이버 수사관</a></li>
+                    <li><a href="/webproject/joblist/job6.html">악성 코드 분석가</a></li>
+                    <li><a href="/webproject/joblist/job7.html">인증 심사원</a></li>
+                    <li><a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a></li>
+                    <li><a href="/webproject/joblist/job9.html">DB 보안 전문가</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column middle">
+            <h1 id="title">모의 해킹 전문가<br></h1>
+            <img width="50%" height="10%" src="/webproject/images/jobs/1모의해킹전문가.jpg"/>
+            <h3><br>직업 설명<br></h3>
+            <p>
+                ‘모의해킹’이란 악의적인 목적이 아닌 기업으로부터 인가받은 해킹전담 컨설턴트에 의해 외부 또는 내부 네트워크상의 서비스와 서버에 대해 실제 크래커가 사용하는 해킹 도구와 기법을 이용하여 정보 시스템의 침투 가능성을 진단하는 업무입니다.<br>
+                이러한 진단과정을 통해 불법침입의 가능성이 발견될 경우 취약한 부분에 대한 대응책 및 개선방안을 마련해 보안 사고를 미연에 방지할 수 있습니다.<br>
+            </p>
+            <h3><br>요구 능력<br></h3>
+            <p>
+                우선적으로 취약점들에 대한 이해가 선행되어야 합니다.<br>
+                웹을 통해서 내부 네트워크로 들어오는 다양한 경로를 찾아내는 게 모의 해킹이라 할 수 있습니다.<br>
+                이에 웹 시스템에 대한 취약점, IT 인프라, 서버, DBMS, 네트워크 취약점들을 이해하고 있어야 됩니다.<br>
+                <br>
+                모의 해킹은 한 사람이 모든 업무를 하지 않고, 각 분야의 전문가들과의 의견을 조합하여 진행하게 됩니다.<br>
+                결과적으로 각 취약점들은 물론 각 구성요소들에 대한 이해가 필수적입니다.<br>
+                <br>
+                이와 함께 웹 애플리케이션 진단에서는 개발자의 관점에서 ‘개발자들이 흔히 할 수 있는 실수가 무엇이 있을까?’에 대해 자문해 보는 자세가 필요합니다.<br>
+                침투하고 나서 끝난 것이 아니고 개선사항에 대한 방향성도 제시할 수 있어야 하기 때문입니다.<br>
+                <br>
+                검색능력과 주도적으로 문제를 해결하려고 하는 능력 역시 중요합니다.<br>
+                스킬 등은 회사에서 충분히 가르칠 수 있기 때문입니다.<br>
+                마지막으로 단순히 웹 서버만 바라보는 것이 아니라 인프라를 넓게 바라볼 수 있는 시각이 중요합니다.<br>
+            </p>
+            <h3><br>취업 준비<br></h3>
+            <p> 모의해킹 분야에 진출하기 쉬운 방법 중 하나는 각종 해킹 방어 대회에서 입상하는 것입니다.<br> 
+                주목을 받을 수 있고, 침투능력을 인정받을 수 있기 때문입니다.<br> 
+                하지만, 어떤 회사를 목표로 하느냐에 따라서 준비가 다를 것 같습니다.<br>
+                <br>
+                만약 모의해킹 분야에 집중한다면 대회 준비를 한다거나, 바로 업무에 적용할 수 있는 기술들에 집중하는 게 좋을 것 같습니다.<br>
+                이와 함께 모의해킹으로 시작으로 해서 조금 더 나아가서 프로세스 문제에 대해서도 생각할 수 있는 전반적인 그림을 볼 수 있는 능력을 키우는 것도 좋지 않을까 생각이 됩니다.<br>
+                직원 채용과 관련해서는 동아리 활동 등 보안에 대한 적극적인 관심 여부를 중점적으로 살펴보고 있습니다.<br>
+                CISSP, 정보보안기사 등의 자격증은 이력서에 쓰기는 괜찮을 것 같기는 한데, 신입의 경우 자격증이 그 사람을 판단하는 요소가 되지는 않을 것 같습니다.<br>
+                현상을 바라보는 눈을 어떻게 가져가는가 하는 마음가짐과 길을 찾아가는 트레이닝이 잘 되어 있으면 비전공자라고 하더라도 이러한 직업군에 적응하는데 문제가 없을 겁니다.<br>
+                실질적으로는 스펙보다는 면접에서 자신의 그릇을 드러내 보이는 것이 더 중요합니다.<br>
+            </p>
+            <h3><br>인재상<br></h3>
+            <p>
+                첫 번째로 불굴의 의지입니다.<br>
+                취약점은 뚫릴 때까지 해야 되는 것이기 때문입니다.<br>
+                <br>
+                두 번째로는 커뮤니케이션 능력이 필요합니다.<br>
+                내부 팀원 및 PM과의 커뮤니케이션이 필요하고, 고객에게 발견한 취약점들을 설명할 수 있어야 되고, 진단 도중 발생한 문제점에 대해서도 고객과 의논해야 되며, 경영진과의 커뮤니케이션 역시 필수적입니다.<br>
+                또한, 개발자들과 문제점에 대한 개선 및 취약점 판단 여부들을 논의해야 됩니다.<br>
+                <br>
+                마지막으로는 보안의 전 분야가 그렇듯 윤리의식이 꼭 필요합니다. 항상 보안서약서를 숙지하고 계약서에서 명시된 부분 이외에 호기심에 의해서 공격을 수행해서는 안 됩니다.<br>
+            </p>
+            <h3><br>장단점<br></h3>
+            <p>
+                매번 새로운 고객을 만나고 새로운 미션을 가지고 하다 보니 새롭다는 것이 장점이지만 반대로 고객들보다 많이 알아야 되고 짧은 시간 안에 고객과의 커뮤니케이션 할 수 있는 능력을 갖추어야 되는 부담감이 단점이 될 수도 있습니다.<br>
+                또한 해킹을 성공했을 때의 성취감이 장점이 될 수 있지만 반대로 성취감 때문에 야근을 하는 것과 뚫어야 된다는 부담감이 단점이 될 수 있습니다.<br>
+            </p>
+            <h3><br>전망<br></h3>
+            <p>
+                현재 정보보안의 트렌드는 융합 즉, 물리보안과 IT 보안을 합쳐서 융합보안을 추구하는 방향인 것 같습니다.<br>
+                매출이 한 요인일 수는 있으나 최근 트렌드가 모바일, 모바일 앱, CS(Reversing), 스마트TV, 그 외 사물간의 통신 등 결국에는 편의성을 위해서 만들어진 모든 영역에 대해서 보안성을 고려해야 될 시기가 되었습니다.<br>
+                클라우드 보안, 스마트폰 보안 등 뭔가 신기술이 나오면 보안이라는 말이 붙어 결국 모두 보안이 요구되는 시대이기　때문에 전망이 밝습니다.<br>
+            </p>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+  
+</body>
 </html>

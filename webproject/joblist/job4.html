@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>보안 로드맵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header { /*상단 메뉴*/
+            background-color: #f1f1f1;
+            padding: 3px;
+            padding-left: 70px;
+        }
+        .header  ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header  ul:after {
+            content:'';
+            display: block;
+            clear:both;
+        }
+        .header  li {
+            float: left;
+        }
+        .header  li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: yellowgreen;
+            color:white;
+        }
+        .column { /* 사이드 메뉴 + 본문*/
+            float: left;
+            padding: 10px;
+        }
+        .column.side { /*사이드 메뉴*/
+            width: 25%;
+        }
+        #sideMenu {
+            text-align: center;
+        }
+        .column.side ul {
+            list-style-type: none;
+        }
+        .column.side li a{ /*사이드 메뉴 목록*/
+            text-align: center;
+            text-decoration: none;
+            height: 30px;
+            line-height:30px;
+            display:block;
+            padding:0 20px;
+            font-size: 12px;
+            color: #555;
+        }
+        .column.side a:hover { /*사이드 메뉴 active*/
+            background-color : yellowgreen;
+            color:white;
+        }
+        .column.middle { /*본문*/
+            width: 70%;
+        }
+        #title {
+            text-align: center;
+        }
+        img { /*사진 가운데 정렬*/
+            display: block; margin: 0px auto; 
+        }
+        .row:after { /* Clear floats after the columns */
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) { /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+        .footer { /* Style the footer */
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li>
+                <a href="main.html">
+                    <img id="logo" width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
+                </a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">직군</button>
+                    <div class="dropdown-content">
+                        <a href="/webproject/joblist/job1.html">모의 해킹 전문가</a>
+                        <a href="/webproject/joblist/job2.html">보안 기술 영업</a>
+                        <a href="/webproject/joblist/job3.html">보안 컨설턴트</a>
+                        <a href="/webproject/joblist/job4.html">보안 관제사</a>
+                        <a href="/webproject/joblist/job5.html">사이버 수사관</a>
+                        <a href="/webproject/joblist/job6.html">악성 코드 분석가</a>
+                        <a href="/webproject/joblist/job7.html">인증 심사원</a>
+                        <a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a>
+                        <a href="/webproject/joblist/job9.html">DB 보안 전문가</a>
+                    </div>
+                </div>
+            </li>
+                <li><a href="">로드맵</a></li>
+                <li><a href="">대외활동</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">커뮤니티</a></li>
+            </ul>
+        </h3>
+    </div>
+ 
+    <div class="row">
+        <div class="column side">
+            <nav>
+                <h4 id="sideMenu">카테고리</h4>
+                <ul>
+                    <li><a href="/webproject/joblist/job1.html">모의 해킹 전문가</a></li>
+                    <li><a href="/webproject/joblist/job2.html">보안 기술 영업</a></li>
+                    <li><a href="/webproject/joblist/job3.html">보안 컨설턴트</a></li>
+                    <li><a href="/webproject/joblist/job4.html">보안 관제사</a></li>
+                    <li><a href="/webproject/joblist/job5.html">사이버 수사관</a></li>
+                    <li><a href="/webproject/joblist/job6.html">악성 코드 분석가</a></li>
+                    <li><a href="/webproject/joblist/job7.html">인증 심사원</a></li>
+                    <li><a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a></li>
+                    <li><a href="/webproject/joblist/job9.html">DB 보안 전문가</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column middle">
+            <h1 id="title">보안 관제사<br></h1>
+            <img width="50%" height="10%" src="/webproject/images/jobs/4보안관제사.jpg"/>
+            <h3><br>직업 설명<br></h3>
+            <p>보안관제는 침해위협을 탐지하고 차단하는 것이 주 업무입니다.<br>
+                IDS, IPS, Anti-DDoS, 웹 방화벽 등이 관제를 받는 대상이 됩니다.<br>
+                <br>
+                파견관제의 경우에는 조금 차이가 있을 수 있습니다.<br>
+                파견 가는 회사에 따라서 클라이언트단의 보안 솔루션을 함께 관리하게 됩니다.<br>
+                원격관제에서는 기본적으로 네트워크 보안장비에 대해 관제업무를 수행하고 있습니다.<br>
+                가용성 점검, 정책 설정, 침해 이벤트 탐지, 이벤트 백업 등이 있습니다.<br>
+                이벤트 백업 같은 경우에는 1년간 내용을 백업해두는 것입니다.<br>
+                이러한 파견을 통해 침해 위협을 즉시 탐지하여 대응팀과 협조 하에 빠르게 보안위협에 대응하는 직업입니다.<br></p>
+            <h3><br>요구 능력<br></h3>
+            <p>
+                가장 기본적인 능력은 네트워크와 시스템입니다.<br>
+                특히, 유닉스와 리눅스 시스템에 대해서는 세부적으로 이해하고 있어야 합니다.<br>
+                실질적으로 리눅스와 유닉스에 대해서 자유자재로 다룰 수 있고, 네트워크 환경 구성도에 대해서도 이해를 할 수 있어야 관제가 가능합니다.<br>
+                또한 네트워크 환경에 대한 이해가 선행되어야 외부에서 침입이 들어왔을 때 어떤 경로를 통해 들어왔는지를 알 수 있습니다.<br>
+                실제로 해킹을 당했을 때에도 분석을 하다 보면 유닉스 시스템에 대해 분석해야 하는 경우가 많기 때문에 위의 지식은 꼭 갖추어야 됩니다.<br>
+                <br>
+                추가적으로 말씀드리면, 대부분의 WAF, IDS, IPS, DDoS 보안장비들이 유닉스 기반인 경우가 많습니다.<br>
+                그래서 유닉스, 리눅스 시스템에 익숙하면 네트워크 보안장비를 이해하는 데도 많은 도움을 받을 수 있습니다.<br>
+            </p>
+            <h3><br>취업 준비<br></h3>
+            <p> 대학에서는 프로그래밍 위주의 교육을 주로 하는데, 학교에서 기본적인 네트워크와 보안에 대해 교육을 하지 않는다면 개인적으로 공부해야 합니다.<br>
+                그리고 취업준비시 기본적으로 CCNA나 정보보안기사 등의 자격증은 소지하고 있는 것이 좋습니다.<br>
+                기업에서는 신입사원들에게 고수준의 보안지식을 요구하는 것이 아니라 기초적인 능력을 많이 물어봅니다.<br>
+                또한, 기술에 대해 전혀 모르는 사람이 아니라면 입사 후 가르쳐도 충분하기 때문에 신입사원들의 경우는 인성적인 능력을 많이 봅니다.<br>
+            </p>
+            <h3><br>인재상<br></h3>
+            <p>
+                보안업무를 하는 사람들에게 가장 중요한 것은 보안의식입니다.<br>
+                그리고 업무 특성상 IDS, IPS, WAF, Anti-DDoS 대응 등 많은 보안장비를 운용하게 되는데, 이러한 장비의 정책을 잘못 건드리게 되면 고객사 서비스에 영향을 주게 됩니다.<br>
+                인적인 요소에 의해 장애가 발생하게 되면 고객사 서비스와 바로 직결될 수 있기 때문에 꼼꼼함과 성실함이 필수적인 능력으로 요구됩니다.<br>
+                덜렁대거나 대충하는 것이 아니라, 어떤 정책 하나를 세우더라도 이 정책이 적절한지, 정말 필요한 하는지 등을 세심하게 검토할 수 있는 꼼꼼함이 필요합니다.<br>
+                게다가 관제 업무는 대부분 교대 근무인데, 한 조가 같이 근무를 하기 때문에 한 사람이 나태해지거나 불성실하면 다른 근무자들에게 피해를 줄 수 있기 때문입니다.<br>
+            </p>
+            <h3><br>장단점<br></h3>
+            <p>
+                직업상의 장점은 특정한 장비나 환경에 국한되어 있지 않고, 다양한 회사의 장비들을 많이 다뤄볼 수 있는 점입니다.<br>
+                그래서 업무를 하다보면 배울 수 있는 부분이 상당히 많습니다.<br>
+                이렇듯 다양한 경험을 쌓을 수 있기 때문에 업무 자체가 자신의 스킬이 된다는 장점이 있습니다.<br>
+                하지만 교대근무 특성상 주말이나 설날 같은 휴무가 딱히 없다 보니 사회생활이나 친구들과의 만남 등 여가생활을 즐기는데 애로사항이 있다는 점이 단점이라 할 수 있습니다.<br>
+                그러나 예전에 비해서 업무 프로세스가 많이 정형화되었고, 기본 틀이 잘 짜여 있습니다.<br>
+            </p>
+            <h3><br>전망<br></h3>
+            <p>
+                요즘 웬만한 기업들에서는 방화벽, IDS, IPS 등 다양한 보안장비를 사용하고 있지만 막상 관제를 나가보면 정책이 제대로 업데이트 되지 않는 경우가 많습니다.<br>
+                이런 정책을 계속 운영하고 모니터링 할 사람이 필요하고, 이것이 보안관제사들의 업무입니다.<br>
+                실질적으로 일반 기업에서는 일일이 관제를 하기도 힘들고, 전문 인력을 보유하기도 힘든 게 사실입니다.<br>
+                그렇기에 장비만 가지고 있는 업체들도 가장 먼저 고려하는 것이 관제라고 할 수 있습니다.<br>
+                10년 정도 있으면 국내의 웬만한 기업들은 관제를 할 예정이기 때문에 전망이 밝습니다.<br>
+            </p>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+  
+</body>
+</html>

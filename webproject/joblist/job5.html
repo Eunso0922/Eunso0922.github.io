@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>보안 로드맵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header { /*상단 메뉴*/
+            background-color: #f1f1f1;
+            padding: 3px;
+            padding-left: 70px;
+        }
+        .header  ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header  ul:after {
+            content:'';
+            display: block;
+            clear:both;
+        }
+        .header  li {
+            float: left;
+        }
+        .header  li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: yellowgreen;
+            color:white;
+        }
+        .column { /* 사이드 메뉴 + 본문*/
+            float: left;
+            padding: 10px;
+        }
+        .column.side { /*사이드 메뉴*/
+            width: 25%;
+        }
+        #sideMenu {
+            text-align: center;
+        }
+        .column.side ul {
+            list-style-type: none;
+        }
+        .column.side li a{ /*사이드 메뉴 목록*/
+            text-align: center;
+            text-decoration: none;
+            height: 30px;
+            line-height:30px;
+            display:block;
+            padding:0 20px;
+            font-size: 12px;
+            color: #555;
+        }
+        .column.side a:hover { /*사이드 메뉴 active*/
+            background-color : yellowgreen;
+            color:white;
+        }
+        .column.middle { /*본문*/
+            width: 70%;
+        }
+        #title {
+            text-align: center;
+        }
+        img { /*사진 가운데 정렬*/
+            display: block; margin: 0px auto; 
+        }
+        .row:after { /* Clear floats after the columns */
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) { /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+        .footer { /* Style the footer */
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li>
+                <a href="main.html">
+                    <img id="logo" width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
+                </a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">직군</button>
+                    <div class="dropdown-content">
+                        <a href="/webproject/joblist/job1.html">모의 해킹 전문가</a>
+                        <a href="/webproject/joblist/job2.html">보안 기술 영업</a>
+                        <a href="/webproject/joblist/job3.html">보안 컨설턴트</a>
+                        <a href="/webproject/joblist/job4.html">보안 관제사</a>
+                        <a href="/webproject/joblist/job5.html">사이버 수사관</a>
+                        <a href="/webproject/joblist/job6.html">악성 코드 분석가</a>
+                        <a href="/webproject/joblist/job7.html">인증 심사원</a>
+                        <a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a>
+                        <a href="/webproject/joblist/job9.html">DB 보안 전문가</a>
+                    </div>
+                </div>
+            </li>
+                <li><a href="">로드맵</a></li>
+                <li><a href="">대외활동</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">커뮤니티</a></li>
+            </ul>
+        </h3>
+    </div>
+ 
+    <div class="row">
+        <div class="column side">
+            <nav>
+                <h4 id="sideMenu">카테고리</h4>
+                <ul>
+                    <li><a href="/webproject/joblist/job1.html">모의 해킹 전문가</a></li>
+                    <li><a href="/webproject/joblist/job2.html">보안 기술 영업</a></li>
+                    <li><a href="/webproject/joblist/job3.html">보안 컨설턴트</a></li>
+                    <li><a href="/webproject/joblist/job4.html">보안 관제사</a></li>
+                    <li><a href="/webproject/joblist/job5.html">사이버 수사관</a></li>
+                    <li><a href="/webproject/joblist/job6.html">악성 코드 분석가</a></li>
+                    <li><a href="/webproject/joblist/job7.html">인증 심사원</a></li>
+                    <li><a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a></li>
+                    <li><a href="/webproject/joblist/job9.html">DB 보안 전문가</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column middle">
+            <h1 id="title">사이버 수사관<br></h1>
+            <img width="50%" height="10%" src="/webproject/images/jobs/5사이버수사관.jpg"/>
+            <h3><br>직업 설명<br></h3>
+            <p>
+                각종 사이버범죄로부터 국민들을 지켜주는 직업입니다.<br>
+                사이버수사관이 속해 있는 사이버테러대응센터는 전체 경찰청 조직 중 수사국에 해당하는 조직이고, 4개의 팀으로 구성되어 있습니다.<br>
+                국내외 협력과 전체 센터를 담당하는 협력운영팀, 전국의 사이버수사대를 지휘하고 사이버범죄 예방활동과 함께 발생한 범죄에 대한 수사 지휘·조정 활동을 하는 기획수사팀, 그리고 중요한 국가적 사이버테러나 사이버범죄가 발생했을 때 직접 수사를 하는 사이버수사팀, 대규모 압수수색이나 사건과 관련되어 있는 각종 컴퓨터와 스마트폰, 스마트패드, 네비게이션 등의 디지털기기에 대한 증거분석을 통해 사건과 관련된 내용을 밝힘으로써 사건의 근거를 법정에 제출해 사용토록 하는 디지털포렌식팀 등 총 4개의 팀으로 구성되어 있습니다.<br>
+            </p>
+            <h3><br>요구 능력<br></h3>
+            <p>
+                사이버테러 수사라고 하는 것은 어떻게 보면 인문학적 부분과 공학적 부분이 서로 결합되어 있고, 모든 학문이 다 융합되어 있는 종합예술과 같은 능력을 필요로 하는 분야입니다.<br>
+                한 가지 분야에 능통하다고 해서 업무를 수행할 수 있는 것이 아닙니다.<br>
+                다양한 분야의 기술과 지식, 프로그래밍 언어능력까지 복합적으로 갖추어야만 온전히 이 업무를 수행할 수 있습니다.<br>
+                특히, 기본적인 프로그래밍 언어와 윈도우·유닉스·리눅스 등 각종 운영체제에 대한 이해가 필요할 뿐만 아니라 스마트폰에 쓰이고 있는 iOS·안드로이드OS·심비안OS 등 모바일 운영체제에 대해서도 알고 있어야 합니다.<br>
+                <br>
+                또한, 파일 시스템에 대한 정확한 이해도 요구됩니다.<br>
+                파일 시스템에 대해 정확히 이해하고 있어야 삭제된 데이터를 복구할 때 제대로 된 복원이 가능합니다.<br>
+                이 외에 네트워크에 대한 이해도 대단히 중요합니다.<br>
+            </p>
+            <h3><br>취업 준비<br></h3>
+            <p> 사이버수사관은 현재 특채로 모집하고 있습니다.<br>
+                컴퓨터공학, 정보보호학과 등 사이버관련학과 졸업 후 석사과정을 수료하거나 IT 경력이 3년 이상이어야 응시가 가능합니다.<br>
+                수사관 선발과정은 구술실기시험, 체력검사, 적성검사, 면접시험 순으로 진행되며, 실기는 현재 경찰청 사이버테러대응센터에서 주관하는 사이버수사관 특채 선발 방식으로 진행하고 있습니다.<br>
+                매년 2회 20명씩 총 40명을 채용하고 있으며, 해킹·악성코드 분석, 디지털 포렌식, 시스템 네트워크 엔지니어링, 데이터베이스, 프로그래밍 등 5개 분야에 대해 각 분야별 전문적 지식을 면접을 통해 평가하고 있습니다.<br>
+                면접시험에서는 협동심, 적응력, 도덕성 등의 업무해결능력을 평가해 선발하고 있으며, 합격 후에는 경찰교육기관인 중앙경찰학교에서 6~8개월 동안 교육을 받은 후 현장에 배치됩니다.<br>
+            </p>
+            <h3><br>인재상<br></h3>
+            <p>
+                이 분야에 관심이 있고, 이 분야의 일을 좋아하고 사랑해야 한다는 것, 그러니까 열정이 제일 중요합니다.<br>
+                그리고 진실을 추구하고, 정의를 위해 자신의 목숨까지도 바칠 자세가 되어 있는 그런 정의로운 사람이 필요합니다.<br>
+                그 외에 기술적으로는 IT 분야에 대한 다양한 관심과 비전을 추구하는 자세가 요구됩니다.<br>
+            </p>
+            <h3><br>장단점<br></h3>
+            <p>
+                최근 잇따라 사이버테러가 발생하면서 정부와 기업에서 사이버보안 및 정보보호 분야에 많은 관심을 갖고 투자하고 있습니다.<br>
+                또한, 기업에서 개인정보 유출사건이 발생했을 때 기업에 많은 과징금이 부과될 수 있을 뿐 아니라 기업 CEO가 책임지고 물러나도록 정부에서 권고하고 있어 많은 기업들이 우수한 정보보안인력 확보에 열을 올리고 있습니다.<br>
+                이렇듯 정보보안업무의 중요성과 부가가치는 더욱 높아지고 있고 이 분야에서의 경험을 살려 다양한 캐리어를 쌓으면 향후 퇴직 후에도 활동할 수 있는 기회가 있을 것으로 기대됩니다.<br>
+                <br>
+                그리고 보이스피싱과 스미싱, 첨단 신종범죄인 메모리 해킹 등과 같은 범죄가 발생하게 되면 일반사람들은 이에 대한 정확한 이해와 지식 부족으로 쉽게 피해를 당할 수 있습니다.<br>
+                하지만 사이버수사관으로써 일을 하다보면 이런 부분을 잘 알고 대응할 수 있어 본인뿐만 아니라 많은 국민들이 이러한 범죄로 인한 피해를 당하지 않도록 도울 수 있다는 보람을 느낄 수 있습니다. 이와 함께 IT 분야의 빠른 기술변화를 늘 접할 수 있어 시대의 흐름에 뒤쳐지지 않고 살아가는 것이 장점이라 생각합니다.<br>
+            </p>
+            <h3><br>전망<br></h3>
+            <p>
+                사이버 범죄가 과거 디도스 공격에서 시스템 파괴 형태로 바뀌고 있고, 향후에는 인명피해를 야기할 수 있는 대규모 사이버테러가 발생할 수 있을 것으로 봅니다.<br>
+                또한 소규모적으로 개인의 홈 네트워킹 시스템을 해킹하여 가정에 화재 및 가스폭발을 유발해 물리적·인명적 손상이 가능하고, 의료 시스템을 해킹하여 환자에게 잘못된 약을 투여하게 함으로써 사람의 생명에 위해를 가하거나 신체 손상을 줄 수 있을 것으로 우려됩니다.<br>
+                이러한 범죄가 늘어남에 따라 사이버수사관의 수요도 증가할 것으로 예상됩니다.<br>
+            </p>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+  
+</body>
+</html>

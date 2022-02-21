@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>보안 로드맵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header { /*상단 메뉴*/
+            background-color: #f1f1f1;
+            padding: 3px;
+            padding-left: 70px;
+        }
+        .header  ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header  ul:after {
+            content:'';
+            display: block;
+            clear:both;
+        }
+        .header  li {
+            float: left;
+        }
+        .header  li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: yellowgreen;
+            color:white;
+        }
+        .column { /* 사이드 메뉴 + 본문*/
+            float: left;
+            padding: 10px;
+        }
+        .column.side { /*사이드 메뉴*/
+            width: 25%;
+        }
+        #sideMenu {
+            text-align: center;
+        }
+        .column.side ul {
+            list-style-type: none;
+        }
+        .column.side li a{ /*사이드 메뉴 목록*/
+            text-align: center;
+            text-decoration: none;
+            height: 30px;
+            line-height:30px;
+            display:block;
+            padding:0 20px;
+            font-size: 12px;
+            color: #555;
+        }
+        .column.side a:hover { /*사이드 메뉴 active*/
+            background-color : yellowgreen;
+            color:white;
+        }
+        .column.middle { /*본문*/
+            width: 70%;
+        }
+        #title {
+            text-align: center;
+        }
+        img { /*사진 가운데 정렬*/
+            display: block; margin: 0px auto; 
+        }
+        .row:after { /* Clear floats after the columns */
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) { /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+        .footer { /* Style the footer */
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li>
+                <a href="main.html">
+                    <img id="logo" width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
+                </a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">직군</button>
+                    <div class="dropdown-content">
+                        <a href="/webproject/joblist/job1.html">모의 해킹 전문가</a>
+                        <a href="/webproject/joblist/job2.html">보안 기술 영업</a>
+                        <a href="/webproject/joblist/job3.html">보안 컨설턴트</a>
+                        <a href="/webproject/joblist/job4.html">보안 관제사</a>
+                        <a href="/webproject/joblist/job5.html">사이버 수사관</a>
+                        <a href="/webproject/joblist/job6.html">악성 코드 분석가</a>
+                        <a href="/webproject/joblist/job7.html">인증 심사원</a>
+                        <a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a>
+                        <a href="/webproject/joblist/job9.html">DB 보안 전문가</a>
+                    </div>
+                </div>
+            </li>
+                <li><a href="">로드맵</a></li>
+                <li><a href="">대외활동</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">커뮤니티</a></li>
+            </ul>
+        </h3>
+    </div>
+ 
+    <div class="row">
+        <div class="column side">
+            <nav>
+                <h4 id="sideMenu">카테고리</h4>
+                <ul>
+                    <li><a href="/webproject/joblist/job1.html">모의 해킹 전문가</a></li>
+                    <li><a href="/webproject/joblist/job2.html">보안 기술 영업</a></li>
+                    <li><a href="/webproject/joblist/job3.html">보안 컨설턴트</a></li>
+                    <li><a href="/webproject/joblist/job4.html">보안 관제사</a></li>
+                    <li><a href="/webproject/joblist/job5.html">사이버 수사관</a></li>
+                    <li><a href="/webproject/joblist/job6.html">악성 코드 분석가</a></li>
+                    <li><a href="/webproject/joblist/job7.html">인증 심사원</a></li>
+                    <li><a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a></li>
+                    <li><a href="/webproject/joblist/job9.html">DB 보안 전문가</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column middle">
+            <h1 id="title">악성 코드 분석가<br></h1>
+            <img width="50%" height="10%" src="/webproject/images/jobs/6악성코드분석가.jpg"/>
+            <h3><br>직업 설명<br></h3>
+            <p>
+                악성코드나 바이러스 등을 수시로 모니터링하고 분석하여 대응방안을 마련하는 직업입니다.<br>
+                평상시 악성코드나 보안위협에 대해 모니터링을 진행하다가 위협이 감지되면 유형에 따라 각 분석팀에서 분석업무를 시작합니다.<br>
+                분석을 진행하면서 나오는 정보를 적당한 형태대로 분리한 분석정보와 다양한 보안위협에 대한 보안조치, 예방대책을 고려해서 생성한 가이드라인을 연구기반팀에 제공합니다.<br>
+                악성코드에 대한 위협일 경우 시그니처를 작성하여 솔루션 제품에 반영하고, 네트워크 취약점일 경우 네트워크 솔루션 제품에 시그니처를 반영합니다.<br>
+            </p>
+            <h3><br>요구 능력<br></h3>
+            <p>
+                기본적으로 보안과 관련된 지식이 필요하고, 특정 분야에만 치우치기 보다는 폭넓은 지식을 보유하고 있는 것이 좋습니다.<br>
+                기본 능력이라면 일반적으로 대학 전산 전공과목에서 배우는 전반적인 지식 정도를 숙지하고 있으면 됩니다.<br>
+                그 이외에는 입사 후 업무상 필요한 지식, 리버싱이나 악성코드의 특징 등을 배우면 됩니다.<br>
+                루트킷, 바이러스, 모바일 악성코드 등 악성코드가 계속해서 진화하고 고도화되고 있기 때문에 이에 맞춰 새로운 기술을 습득하고 구현할 수 있는 능력이 필요할 것이라 생각됩니다.<br>
+            </p>
+            <h3><br>취업 준비<br></h3>
+            <p> 학교에서 가르쳐 주는 학과수업을 잘 따라가는 것은 기본이고, 프로그램 언어를 잘 익혀두면 많은 도움이 됩니다.<br>
+                평소 보안관련 뉴스를 잘 챙겨보면서 최신 동향을 익히고, 보안 커뮤니티 쪽에 관심을 가지면서 정보를 얻는 것이 좋습니다.<br>
+                딱히 어떠한 자격이 필요하다기 보다는 위에서 말씀드린 학부 수준의 기본지식과 보안 트렌드에 대한 관심이 중요하고, 보안 관련 대회 참가나 동아리 활동으로 시야를 넓히는 등의 경험도 도움이 될 것입니다.<br>
+                보안 분야라고 취업준비가 더 어렵거나 힘든 건 아닙니다.<br>
+                이 분야에 관심을 가지게 된 계기나 앞으로의 포부가 취업의 당락을 결정하는데 중요한 요소가 되기 때문입니다.<br>
+            </p>
+            <h3><br>인재상<br></h3>
+            <p>
+                인내력과 긍정적인 마인드, 조직에 잘 융화될 수 있는 인성이 필요합니다.<br>
+                그리고 업무특성상 인내력을 요하는 경우가 많은데, 예를 들면 악성파일을 몇 시간 붙들고 있는 경우에도 그 흐름을 놓치지 않고 이어갈 수 있는 인내력, 집중력이 중요합니다.<br>
+                보안에 대한 흥미, 열정이 갖춰져 있는 분이라면 원하는 기업에서 업무를 수행하는 데 큰 무리가 없을 것입니다.
+            </p>
+            <h3><br>장단점<br></h3>
+            <p>
+                타 분야에 비해 보안이라는 분야는 굉장히 많은 것을 배울 수 있고, 새로운 것을 빨리 익힐 수 있습니다.<br>
+                외부의 위협으로부터 방어하고 대응하는 과정을 통해 사명감과 직업에 대한 자부심을 가질 수 있다는 것이 장점인 것 같습니다.<br>
+                그러나 항상 끊임없이 공부해야 하기 때문에 시간이 많이 부족하다는 점과 한밤중이나 주말 등 수시로 발생할 수 있는 비상상황에 대해 항상 긴장감을 유지해야 한다는 점이 단점이라고 할 수 있습니다.<br>
+            </p>
+            <h3><br>전망<br></h3>
+            <p>
+                앞으로는 자동화되고 잘 갖춰진 인프라를 바탕으로 보안 분야도 빅데이터나 클라우드 서비스처럼 수집해야 할 데이터가 많아지고 있습니다.<br>
+                보안 분야에서도 그런 데이터들을 얼마나 효율적으로 수집·분석하고, 신속하게 적용시키느냐가 중요해질 것 같습니다.<br>
+                그리고 디바이스나 모바일 기기가 일상생활과 밀접해지면서 앞으로도 보안이 적용되는 분야가 더욱 많아질 것으로 예상할 수 있는데, 그만큼 발전가능성이 더 크다고 할 수 있습니다.<br>
+            </p>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+  
+</body>
+</html>

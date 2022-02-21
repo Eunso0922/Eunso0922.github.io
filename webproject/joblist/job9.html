@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>보안 로드맵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header { /*상단 메뉴*/
+            background-color: #f1f1f1;
+            padding: 3px;
+            padding-left: 70px;
+        }
+        .header  ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header  ul:after {
+            content:'';
+            display: block;
+            clear:both;
+        }
+        .header  li {
+            float: left;
+        }
+        .header  li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: yellowgreen;
+            color:white;
+        }
+        .column { /* 사이드 메뉴 + 본문*/
+            float: left;
+            padding: 10px;
+        }
+        .column.side { /*사이드 메뉴*/
+            width: 25%;
+        }
+        #sideMenu {
+            text-align: center;
+        }
+        .column.side ul {
+            list-style-type: none;
+        }
+        .column.side li a{ /*사이드 메뉴 목록*/
+            text-align: center;
+            text-decoration: none;
+            height: 30px;
+            line-height:30px;
+            display:block;
+            padding:0 20px;
+            font-size: 12px;
+            color: #555;
+        }
+        .column.side a:hover { /*사이드 메뉴 active*/
+            background-color : yellowgreen;
+            color:white;
+        }
+        .column.middle { /*본문*/
+            width: 70%;
+        }
+        #title {
+            text-align: center;
+        }
+        img { /*사진 가운데 정렬*/
+            display: block; margin: 0px auto; 
+        }
+        .row:after { /* Clear floats after the columns */
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) { /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+        .footer { /* Style the footer */
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li>
+                <a href="main.html">
+                    <img id="logo" width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
+                </a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">직군</button>
+                    <div class="dropdown-content">
+                        <a href="/webproject/joblist/job1.html">모의 해킹 전문가</a>
+                        <a href="/webproject/joblist/job2.html">보안 기술 영업</a>
+                        <a href="/webproject/joblist/job3.html">보안 컨설턴트</a>
+                        <a href="/webproject/joblist/job4.html">보안 관제사</a>
+                        <a href="/webproject/joblist/job5.html">사이버 수사관</a>
+                        <a href="/webproject/joblist/job6.html">악성 코드 분석가</a>
+                        <a href="/webproject/joblist/job7.html">인증 심사원</a>
+                        <a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a>
+                        <a href="/webproject/joblist/job9.html">DB 보안 전문가</a>
+                    </div>
+                </div>
+            </li>
+                <li><a href="">로드맵</a></li>
+                <li><a href="">대외활동</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">커뮤니티</a></li>
+            </ul>
+        </h3>
+    </div>
+ 
+    <div class="row">
+        <div class="column side">
+            <nav>
+                <h4 id="sideMenu">카테고리</h4>
+                <ul>
+                    <li><a href="/webproject/joblist/job1.html">모의 해킹 전문가</a></li>
+                    <li><a href="/webproject/joblist/job2.html">보안 기술 영업</a></li>
+                    <li><a href="/webproject/joblist/job3.html">보안 컨설턴트</a></li>
+                    <li><a href="/webproject/joblist/job4.html">보안 관제사</a></li>
+                    <li><a href="/webproject/joblist/job5.html">사이버 수사관</a></li>
+                    <li><a href="/webproject/joblist/job6.html">악성 코드 분석가</a></li>
+                    <li><a href="/webproject/joblist/job7.html">인증 심사원</a></li>
+                    <li><a href="/webproject/joblist/job8.html">정보 보호 최고 책임자</a></li>
+                    <li><a href="/webproject/joblist/job9.html">DB 보안 전문가</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column middle">
+            <h1 id="title">DB 보안 전문가<br></h1>
+            <img width="50%" height="10%" src="/webproject/images/jobs/9DB보안전문가.jpg"/>
+            <h3><br>직업 설명<br></h3>
+            <p>고객정보 등의 중요 정보를 모아놓은 DB의 암호화 및 보안 솔루션 관련 업무를 수행하는 직업입니다.</p>
+            <h3><br>요구 능력<br></h3>
+            <p>
+                DB보안도 융합보안에 속하기 때문에 데이터베이스에 대한 지식이 기본적으로 필요하고, 보안에 대한 지식도 필요합니다.<br>
+                또한 DB보안은 암호학과 밀접한 관련이 있기 때문에 암호학 지식과 함께 법령에 대해 잘 아는 것이 중요합니다.<br>
+                그리고 DB는 정말 복잡한 구조로 이루어져 있는데 이를 잘 모르면 어느 부분에 허점이 있을 수 있고 어디에 백도어가 있을지 알 수가 없기 때문에 DB구조를 이해하는 능력도 필요합니다.<br>
+                <br>
+                뿐만 아니라 DB와 보안, 두 분야 모두에 관심 있는 사람들이 적합합니다.<br>
+                활용도 높게 서비스를 다양화하고 성능을 높이려는 것이 DB보안 관리자의 생각인데, 다양한 길이 있으면 보안은 점점 더 취약해질 수밖에 없습니다.<br>
+                서비스를 중요시하면 보안이 약해지고 보안성을 높이면 서비스를 제공하는 부분이 약해집니다.<br>
+                서비스 제공과 보안성을 적절한 선에서 유지하기 위해 설계·구축·운영하는 것이 중요합니다.<br>
+            </p>
+            <h3><br>취업 준비<br></h3>
+            <p> DB보안 분야의 인력 수요는 굉장히 많은 편입니다.<br>
+                하지만 영세기업에서 DB보안 전문가를 별도로 채용하지는 않고, 주로 정부 산하기관, 공사, 금융권 같은 곳에서 DB보안 전문가를 필요로 합니다. 따라서 해당 기관의 조건을 잘 살펴보는 것이 좋습니다.<br>
+            </p>
+            <h3><br>인재상<br></h3>
+            <p>
+                DB보안 전문가는 항상 경각심이 필요합니다.<br>
+                수많은 사람들의 개인정보를 지키는 사람이기 때문입니다.<br>
+                <br>
+                그리고 DB나 보안 둘중 하나에만 치우치지 말고, 두 가지를 다 이해할 수 있도록 충분한 지식을 습득해야 합니다.<br>
+                DB보안 전문가가 되려면 배워야 할 게 많습니다.<br>
+                유관부서의 관리자들과 업무 협의를 할 때 보안 측면을 제대로 얘기하지 못해 회사를 위험한 방향으로 가게 해서는 안 됩니다.<br>
+                자기가 아는 지식 선에서 자신의 주장을 고수하고 목소리를 낼 수 있어야 합니다.<br>
+                그래서 기술적인 공부도 중요하지만 그 이외에 기업 전반적인 실태나 주변상황들을 잘 알고, 업무를 협의할 때 자기 주장을 펼치는 것이 중요합니다.<br>
+            </p>
+            <h3><br>장단점<br></h3>
+            <p>
+                안티바이러스 제품 등의 경우 제품 설치는 어렵지 않지만, 그 후에 지속적으로 새로운 공격시도에 대해 분석하고 대응책을 마련해 끊임없이 업데이트해주어야 합니다.<br>
+                그러나 DB보안의 경우는 접근방법이 한정적이고, 최종적으로 접근하는 패턴이 유사하기 때문에 특정 접근방법에 대해서만 제어를 하면 됩니다.<br>
+                때문에 정책을 걸어두면 어느 경로에서 접근을 하더라도 DB에 정보를 요청하는 시점에만 권한을 확인합니다.<br>
+                정책을 한번 지정해놓으면 조직이 크게 변할 때 이외에는 정책이 바뀔 일이 잘 없습니다.<br>
+                그래서 한번 구축을 해놓으면 크게 바쁘지 않습니다. 또한 DB와 보안을 함께 배울 수 있기 때문에 DB운영 측면과 보안성 두 가지 명제에 대해 어느 한 가지 치우칠 일이 없다는 점과 수요는 많은데 공급이 부족하다보니 앞으로 전망이 좋은 것이 장점입니다.
+                <br>
+                그 대신에 위험부담이 큽니다.<br>
+                접근통제가 잘 되지 않아 몇천만 건의 데이터가 복호화된 상태로 유출됐을 경우에는 정말 심각하기 때문입니다.<br>
+                그리고 개인 업무 측면에서 보면 일하면서 기술적인 배움을 얻기는 좀 힘들다는 것이 단점일 수 있습니다.<br>
+                기술 습득은 일하면서 많은 문제에 직면하고 장애를 겪으면서 얻는 건데, DB보안을 하다보면 그런 문제에 부딪힐 일이 많지 않습니다.<br>
+            </p>
+            <h3><br>전망<br></h3>
+            <p>
+                지금 우리가 살아가는 시대는 데이터가 클라우드화되고 빅데이터화되면서 거대해지고 복잡해지고 있습니다.<br>
+                그것들을 분석하여 사용자가 어떤 정보를 필요로 하는지 맞춤형 서비스가 제공되기도 합니다.<br>
+                그러나 이런 데이터의 양이 너무 거대해지면 특정 데이터가 어떤 사용자의 것인지도 모르고 막 섞여서 불특정한 사용자들에게 제공하는 문제가 생길 수 있습니다.<br>
+                이제는 전 세계 수많은 사용자들을 대상으로 서비스를 제공하므로 굉장히 많은 경우의 수와 불특정한 사람들 사이에서 어떻게 보안을 해야 할 것인지를 생각해야 합니다. 굉장히 복잡한 인프라가 될 것이고, 이렇듯 복잡한 인프라 속에서 보안방법도 더 복잡해져야 합니다.<br>
+                그러한 복잡성에 더욱 치밀하게 대비해야 하기 때문에 수요가 많을 것으로 예상됩니다.<br>
+            </p>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+  
+</body>
+</html>
