@@ -2,18 +2,22 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>보안 로드맵</title>
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-        />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
-        <!-- Link Swiper's CSS -->
-        <link
-        rel="stylesheet"
-        href="https://unpkg.com/swiper/swiper-bundle.min.css"
-        />
+        <style>
+            h3{
+                display: inline;
+                margin: 0;
+            }
+            .logo{
+                display: inline;
+            }
+        </style>
+    </head>
 
+    <body>
         <a href="main.html">
             <div class="logo">
             <img width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
@@ -28,40 +32,25 @@
         <h3><a href="">로그인</a></h3>
         <h3><a href="">회원가입</a></h3>
 
-        <!-- Demo styles -->
-
-        <style> /*로고*/
-            h3{
-                display: inline;
-                margin: 0;
-            }
-            .logo{
-                display: inline;
-            }
-        </style>
-
-    </head>
-
-    <body>
-        <nav id="sideMenu">
+        <nav>
             <h4>카테고리</h4>
-            <ul id="leftsideMenu">
+            <ul id="sideMenu">
                 <li><a class="menuLink" href="/webproject/joblist/job1.html">보안 컨설턴트</a></li>
                 <li><a class="menuLink" href="/webproject/joblist/job2.html">악성코드 분석가</a></li>
                 <li><a class="menuLink" href="/webproject/joblist/job3.html">모의해킹 전문가</a></li>
                 <li><a class="menuLink" href="/webproject/joblist/job4.html">보안 기술영업</a></li>
                 <li><a class="menuLink" href="/webproject/joblist/job5.html">보안관제사</a></li>
                 <li><a class="menuLink" href="/webproject/joblist/job6.html">사이버 수사관</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job7.html">DB보안 전문가</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job8.html">인증심사원</a></li>
-                <li><a class="menuLink" href="/webproject/joblist/job9.html">정보 보호 최고책임자</a></li>
+                <li><a class="menuLink" href="/webproject/joblist/job7.html">인증심사원</a></li>
+                <li><a class="menuLink" href="/webproject/joblist/job8.html">정보 보호 최고책임자</a></li>
+                <li><a class="menuLink" href="/webproject/joblist/job9.html">DB보안 전문가</a></li>
             </ul>
         </nav>
 
         <section>
             <article>
                 <h1>보안 컨설턴트<br></h1>
-                <img img width="100%" height="20%" src="/webproject/images/jobs/1모의해킹전문가.jpg" />
+                <img img width="50%" height="10%" src="/webproject/images/jobs/1모의해킹전문가.jpg" />
                 <h3><br>직업 설명<br></h3>
                 <p>회사 내부의 취약점을 발견해 그에 맞는 보안대책을 설계하고, 각종 보안위협으로부터 기업을 보호합니다.</p>
                 <h3><br>요구 능력<br></h3>
@@ -104,32 +93,33 @@
             </article>
         </section>
 
-        <style type="text/css">
-            h4 { 
+        <style>
+            h1 { /*제목*/
+                text-align: center; 
+                margin-left: 60px;
+                margin-bottom: 20px;
+            }
+            h4 { /*카테고리 제목*/
                 text-align: left; 
                 margin-left: 60px;
                 margin-bottom: 20px;
             }
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
+            nav { /*카테고리 내용*/
                 width: 200px;
-                background-color: #f1f1f1;
+                background-color:#eee;
+                border-right: 1px solid #ddd;
             }
-            li a {
-                display: block;
-                color: #000;
-                padding: 8px 16px;
-                text-decoration: none;
+            .sideMenu li a{
+                height: 30px;
+                line-height:30px;
+                display:block;
+                padding:0 20px;
+                font-size: 12px;
+                color: #555;
             }
-            li a.active {
-                background-color: #4CAF50; 
-                color: white;
-            }
-            li a:hover:not(.active) {
-                background-color: #555;
-                color: white;
+            .sideMenu li a:hover {
+                background-color : yellowgreen;
+                color:white;
             }
         </style>
     </body>

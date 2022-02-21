@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>보안 로드맵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .header { /*상단 메뉴*/
+            background-color: #f1f1f1;
+            padding: 3px;
+            padding-left: 70px;
+        }
+        .header  ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header  ul:after {
+            content:'';
+            display: block;
+            clear:both;
+        }
+        .header  li {
+            float: left;
+        }
+        .header  li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: yellowgreen;
+            color:white;
+        }
+        .column { /* 사이드 메뉴 + 본문*/
+            float: left;
+            padding: 10px;
+        }
+        .column.side { /*사이드 메뉴*/
+            width: 25%;
+        }
+        #sideMenu {
+            text-align: center;
+        }
+        .column.side ul {
+            list-style-type: none;
+        }
+        .column.side li a{ /*사이드 메뉴 목록*/
+            text-decoration: none;
+            height: 30px;
+            line-height:30px;
+            display:block;
+            padding:0 20px;
+            font-size: 12px;
+            color: #555;
+        }
+        .column.side a:hover { /*사이드 메뉴 active*/
+            background-color : yellowgreen;
+            color:white;
+        }
+        .column.middle { /*본문*/
+            width: 70%;
+        }
+        #title {
+            text-align: center;
+        }
+        .row:after { /* Clear floats after the columns */
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) { /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+        .footer { /* Style the footer */
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li>
+                <a href="main.html">
+                    <img id="logo" width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
+                </a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">직군</button>
+                    <div class="dropdown-content">
+                        <a href="/webproject/joblist/job1.html">보안 컨설턴트</a>
+                        <a href="/webproject/joblist/job2.html">악성코드 분석가</a>
+                        <a href="/webproject/joblist/job3.html">모의해킹 전문가</a>
+                        <a href="/webproject/joblist/job4.html">보안 기술영업</a>
+                        <a href="/webproject/joblist/job5.html">보안관제사</a>
+                        <a href="/webproject/joblist/job6.html">사이버 수사관</a>
+                        <a href="/webproject/joblist/job7.html">DB보안 전문가</a>
+                        <a href="/webproject/joblist/job8.html">인증심사원</a>
+                        <a href="/webproject/joblist/job9.html">정보 보호 최고책임자</a>
+                    </div>
+                </div>
+            </li>
+                <li><a href="">로드맵</a></li>
+                <li><a href="">대외활동</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">커뮤니티</a></li>
+            </ul>
+        </h3>
+    </div>
+ 
+    <div class="row">
+        <div class="column side">
+            <nav>
+                <h4 id="sideMenu">카테고리</h4>
+                <ul>
+                    <li><a href="/webproject/joblist/job1.html">보안 컨설턴트</a></li>
+                    <li><a href="/webproject/joblist/job2.html">악성코드 분석가</a></li>
+                    <li><a href="/webproject/joblist/job3.html">모의해킹 전문가</a></li>
+                    <li><a href="/webproject/joblist/job4.html">보안 기술영업</a></li>
+                    <li><a href="/webproject/joblist/job5.html">보안관제사</a></li>
+                    <li><a href="/webproject/joblist/job6.html">사이버 수사관</a></li>
+                    <li><a href="/webproject/joblist/job7.html">DB보안 전문가</a></li>
+                    <li><a href="/webproject/joblist/job8.html">인증심사원</a></li>
+                    <li><a href="/webproject/joblist/job9.html">정보 보호 최고책임자</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column middle">
+            <h2 id="title">보안 컨설턴트<br></h2>
+            <img img width="50%" height="10%" src="/webproject/images/jobs/1모의해킹전문가.jpg"/>
+            <h3><br>직업 설명<br></h3>
+            <p>회사 내부의 취약점을 발견해 그에 맞는 보안대책을 설계하고, 각종 보안위협으로부터 기업을 보호합니다.</p>
+            <h3><br>요구 능력<br></h3>
+            <p>
+                1. 경영진의 마인드를 가지고, 경영의 흐름을 읽을 수 있는 능력<br>
+                2. 관리체계 기반, 정보시스템 기반, 공격에 대한 대응방어 기술 등의 보안기술<br>
+                3. 융합보안 트렌드를 읽어낼 수 있는 안목<br>
+                4. 관찰력, 분석력, 문서작성 능력, PT(Presentation) 능력<br>
+            </p>
+            <h3><br>취업 준비<br></h3>
+            <p> 시스템 OS, 데이터베이스, 정보 시스템 동작 운영원리 등 정보시스템에 대한 이해가 중요합니다.<br> 
+                학교에서 배우는 이론적인 운영체제도 필요하지만 실제 상용화된 운영체제나 정보 시스템에 대한 이해가 요구됩니다.<br> 
+                이러한 능력이 취업과 연계되기 위해서는 국내 기업, 공공기관 등에서 사용하는 실제 운영체제나 솔루션이 어떤 아키텍처로 구성되어 있는지 습득하는 것도 큰 도움이 됩니다.<br>
+                <br>
+                또한, 결과 보고 시 필요한 문서작성 능력과 PT(Presentation) 능력도 중요합니다.<br>
+                자격증이 있으면 도움이 될 수 있겠지만 자격증이 맹목적인 평가요소가 될 수는 없습니다.<br>
+                자격증 취득으로 인해 기본적 지식은 쌓이겠지만 업무상에서 그것이 만능은 아니기 때문입니다.<br>
+                하지만, 만약 자격증을 고려한다면 CISSP 등을 추천합니다.<br>
+            </p>
+            <h3><br>인재상<br></h3>
+            <p>
+                문제 해결을 위한 ‘끈기’, 자신의 감정을 제어할 수 있는 ‘침착성’, 상황을 객관적으로 읽을 수 있는 ‘냉철함’, 그리고 기밀 유지를 위한 ‘윤리의식‘ 등이 필요합니다.<br>
+                네 가지를 종합적으로 묶으면 가장 중요한 것은 자기 컨트롤입니다.<br>
+                보안 컨설턴트는 고객을 상대하는 일인 만큼 자기 컨트롤이 되지 않으면 고객으로부터 불만이 생기게 되고, 스스로 컨트롤이 되지 않는다면 회사에서도 더 이상 역할을 맡길 수 없는 상황이 발생합니다.<br>
+                감정을 다스리지 못하게 되면 객관적인 분석 내용이 아닌 자기 주관과 감정에 의한 결과가 도출될 수 있기 때문에 경계해야 합니다.<br>
+            </p>
+            <h3><br>장단점<br></h3>
+            <p>
+                정보보호관련 사고 및 신규 이슈에 따른 패러다임 등을 실제 업무상에 빨리 적용할 수 있고, 그만큼 빨리 터득할 수 있습니다.<br>
+                하지만 문제 해결과 결과 도출에 대한 중압감, 그리고 매번 바뀌는 팀과의 협업 문제는 직업상의 단점이 될 수 있습니다.<br>
+                또한, 이 분야는 평생 자기개발을 위해 힘써야 하는 분야입니다.<br>
+            </p>
+            <h3><br>전망<br></h3>
+            <p>
+                유비쿼터스나 융합보안에 홈 시큐리티가 결합된 방향이 이슈가 될 것으로 예상됩니다.<br>
+                홈 네트워크 활성화로 인해 기업내 해킹 사고가 가정으로까지 확대될 것이라고 예상되기 때문입니다.<br>
+                이와 함께 개인정보보호 분야는 계속 이슈가 될 것입니다.<br>
+            </p>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+  
+</body>
+</html>
