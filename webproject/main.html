@@ -18,7 +18,7 @@
 
     <style>
       /*로고*/
-      h3{
+      h1{
         display: inline;
         margin: 0;
       }
@@ -26,8 +26,35 @@
       .logo{
         display: inline;
       }
-
-
+      
+      /*카테고리*/
+      ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      }
+      ul:after{
+          content:'';
+          display: block;
+          clear:both;
+      }
+      li {
+          float: left;
+      }
+      li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+      li a:hover:not(.active) {
+          background-color: #111;
+      }
+      .active {
+          background-color: #4CAF50;
+      }
 
       /*이벤트 배너*/
       .slider{
@@ -163,13 +190,18 @@
     <a href="main.html"><img width=43.2px height=43.2px src="/webproject/images/logos/logolock.png"></a>
     </div>
 
-    <h3><a href="">직군</a></h3>
-    <h3><a href="">로드맵</a></h3>
-    <h3><a href="">대외활동</a></h3>
-    <h3><a href="">News</a></h3>
-    <h3><a href="">커뮤니티</a></h3>
-    <h3><a href="">로그인</a></h3>
-    <h3><a href="">회원가입</a></h3>
+    <h1>보안 로드맵</h1>
+
+    <ul>
+      <li><a class="active" href="main.html">Home</a></li>
+      <li><a href="">직군</a></li>
+      <li><a href="">로드맵</a></li>
+      <li><a href="">대외 활동</a></li>
+      <li><a href="">News</a></li>
+      <li><a href="">커뮤니티</a></li>
+      <li><a href="">로그인</a></li>
+      <li><a href="">회원가입</a></li>
+    </ul>
 
 
 
