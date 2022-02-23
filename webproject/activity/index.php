@@ -46,6 +46,10 @@ function print_list(){
 
     <?php if(isset($_GET['id'])) { ?>
       <a href="/webproject/activity/update.php?id=<?=$_GET['id']?>">글 수정</a>
+      <form action="delete_process.php" method="post">
+        <input type="hidden" name="id" value="<?=$_GET['id']?>">
+        <input type="submit" value="delete">
+      </form>
     <?php } ?>
 
     <h2>
