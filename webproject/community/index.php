@@ -36,13 +36,13 @@ function print_list(){
     </title>
   </head>
   <body>
-    <h1><a href="/webproject/community/community.php">대외 활동</a></h1>
+    <h1><a href="/webproject/community/community.php">커뮤니티</a></h1>
     <ol>
       <?php
       print_list();
       ?>
     </ol>
-    <a href="/webproject/community/create.php">대외 활동 글 생성</a>
+    <a href="/webproject/community/create.php">커뮤니티 글 생성</a>
 
     <?php if(isset($_GET['id'])) { ?>
       <a href="/webproject/community/update.php?id=<?=$_GET['id']?>">글 수정</a>
@@ -62,3 +62,4 @@ function print_list(){
      ?>
   </body>
 </html>
+
