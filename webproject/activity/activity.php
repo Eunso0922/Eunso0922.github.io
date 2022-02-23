@@ -175,9 +175,9 @@ function print_list(){
                 </div>
             </li>
                 <li><a href="">로드맵</a></li>
-                <li><a href="">대외활동</a></li>
+                <li><a href="/webproject/activity/activity.php">대외활동</a></li>
                 <li><a href="">News</a></li>
-                <li><a href="">커뮤니티</a></li>
+                <li><a href="/webproject/community/community.php">커뮤니티</a></li>
             </ul>
         </h3>
     </div>
