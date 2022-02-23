@@ -1,3 +1,19 @@
+<?php
+function print_list(){
+  $list = scandir('./data');
+  $i = 0;
+  while($i < count($list)){
+    if($list[$i] != '.') {
+      if($list[$i] != '..') {
+        echo "<li><a href=\"/webproject/activity/index.php?id=$list[$i]\">$list[$i]</a></li>\n";
+      }
+    }
+    $i = $i + 1;
+  }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -138,7 +154,7 @@
     <div class="header">
         <ul>
             <li>
-                <a href="/webproject/main.html">
+                <a href="/webproject/main.php">
                     <img id="logo" width=43.2px height=43.2px src="/webproject/images/logos/logolock.png">
                 </a>
             </li>
@@ -171,21 +187,15 @@
             <nav>
                 <h4 id="sideMenu">카테고리</h4>
                 <ul>
-                    <li><a href="">동아리1</a></li>
-                    <li><a href="">동아리2</a></li>
-                    <li><a href="">대회1</a></li>
-                    <li><a href="">동아리3</a></li>
-                    <li><a href="">동아리4</a></li>
-                    <li><a href="">대회2</a></li>
-                    <li><a href="">동아리5</a></li>
-                    <li><a href="">동아리6</a></li>
-                    <li><a href="">대회3</a></li>
+                  <?php
+                  print_list();
+                  ?>
                 </ul>
             </nav>
         </div>
 
     <div class="logo">
-    <a href="/webproject/activity/activitycreate.html"><img width=43.2px height=43.2px src="/webproject/images/logos/create.png"></a>
+    <a href="/webproject/activity/activitycreate.php"><img width=43.2px height=43.2px src="/webproject/images/logos/create.png"></a>
     </div>
 
     <h3>글 생성</h3>
