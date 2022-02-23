@@ -1,4 +1,4 @@
 <?php
-file_put_contents('webproject/activity/'.$_POST['title'], $_POST['description']);
-header('Location: /webproject/activity/activity.html?id='.$_POST['title']);
+file_put_contents('data/'.$_POST['title'], $_POST['description']);
+header('Location: /webproject/activity/index.php?id='.$_POST['title']);
 ?>
