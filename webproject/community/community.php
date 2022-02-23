@@ -145,11 +145,11 @@ function print_list(){
       }
     </style>
 
-    <title>대외 활동</title>
+    <title>커뮤니티</title>
   </head>
 
   <body>
-    <h1>대외 활동</h1>
+    <h1>커뮤니티</h1>
 
     <div class="header">
         <ul>
