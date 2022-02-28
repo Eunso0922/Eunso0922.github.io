@@ -36,13 +36,13 @@ function print_list(){
     </title>
   </head>
   <body>
-    <h1><a href="/webproject/activity/index.php">WEB</a></h1>
+    <h1><a href="/webproject/activity/index.php">대외 활동</a></h1>
     <ol>
       <?php
       print_list();
       ?>
     </ol>
-    <a href="/webproject/activity/create.php">create</a>
+
     <?php if(isset($_GET['id'])) { ?>
       <a href="/webproject/activity/update.php?id=<?=$_GET['id']?>">글 수정</a>
     <?php } ?>
