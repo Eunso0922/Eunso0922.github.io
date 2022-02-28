@@ -42,7 +42,7 @@ function print_list(){
       print_list();
       ?>
     </ol>
-
+    <a href="/webproject/activity/activitycreate.php">대외 활동 글 생성</a>
     <?php if(isset($_GET['id'])) { ?>
       <a href="/webproject/activity/update.php?id=<?=$_GET['id']?>">글 수정</a>
     <?php } ?>
