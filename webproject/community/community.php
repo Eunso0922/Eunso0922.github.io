@@ -174,10 +174,17 @@ function print_list(){
                     </div>
                 </div>
             </li>
+<<<<<<< HEAD
                 <li><a href="/webproject/roadmap/roadmap.html">로드맵</a></li>
                 <li><a href="/webproject/activity/activity.php">대외활동</a></li>
                 <li><a href="">News</a></li>
                 <li><a href="/webproject/community/community.php">커뮤니티</a></li>
+=======
+              <li><a href="">로드맵</a></li>
+              <li><a href="/webproject/activity/activity.php">대외활동</a></li>
+              <li><a href="/webproject/news/news.php">News</a></li>
+              <li><a href="/webproject/community/community.php">커뮤니티</a></li>
+>>>>>>> fb912681c91690272004f744bf8d979ce9846e33
             </ul>
         </h3>
     </div>
